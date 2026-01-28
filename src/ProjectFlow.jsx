@@ -116,11 +116,11 @@ function ProjectFlow() {
       if (response.ok) {
         alert('Project saved successfully!');
       } else {
-        alert('Failed to save project');
+        alert('Failed to save project. Make sure the backend server is running on port 3001.\n\nRun: npm run server');
       }
     } catch (error) {
       console.error('Error saving project:', error);
-      alert('Error saving project. Check console for details.');
+      alert('Cannot connect to backend server. Please ensure the server is running.\n\nRun: npm run server\n\nOr use: npm start (to run both servers)');
     }
   };
 
