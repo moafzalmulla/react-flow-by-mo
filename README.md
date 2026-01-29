@@ -1,16 +1,63 @@
-# React + Vite
+# React Flow Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application for creating and managing flow diagrams with an Express backend for data persistence.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This application requires **both** the frontend (Vite) and backend (Express) servers to be running.
 
-## React Compiler
+### Installation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+```
 
-## Expanding the ESLint configuration
+### Running the Application
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+#### Option 1: Run both servers with one command (Recommended)
+
+```bash
+npm start
+```
+This will start both the Express backend server and Vite dev server simultaneously.
+
+#### Option 2: Run servers separately
+
+You need to run both servers in separate terminals:
+
+**Terminal 1 - Backend Server:**
+```bash
+npm run server
+```
+This starts the Express server on http://localhost:3001
+
+**Terminal 2 - Frontend Server:**
+```bash
+npm run dev
+```
+This starts the Vite dev server on http://localhost:5173
+
+Then open http://localhost:5173 in your browser.
+
+### Available Scripts
+
+- `npm start` - Start both backend and frontend servers concurrently (recommended)
+- `npm run dev` - Start the Vite development server (frontend only)
+- `npm run server` - Start the Express backend server (backend only)
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+## Features
+
+- Create and manage flow diagram projects
+- Add, edit, and connect nodes
+- Export diagrams as PDF
+- Persistent storage with file-based backend
+
+## Tech Stack
+
+- **Frontend:** React, React Flow, Vite
+- **Backend:** Express.js
+- **Routing:** React Router
+- **Styling:** CSS

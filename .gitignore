@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Project data files (generated at runtime)
+public/projects/*.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

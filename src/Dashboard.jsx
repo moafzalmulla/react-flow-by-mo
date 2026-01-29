@@ -58,11 +58,11 @@ function Dashboard() {
         // Navigate to the project
         navigate(`/project/${newProject.id}`);
       } else {
-        alert('Failed to create project');
+        alert('Failed to create project. Make sure the backend server is running on port 3001.\n\nRun: npm run server');
       }
     } catch (error) {
       console.error('Error creating project:', error);
-      alert('Error creating project. Check console for details.');
+      alert('Cannot connect to backend server. Please ensure the server is running.\n\nRun: npm run server\n\nOr use: npm start (to run both servers)');
     }
   };
 
